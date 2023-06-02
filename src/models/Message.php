@@ -20,6 +20,11 @@ class Message extends Db
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function findById()
+    {
+       
+    }
+
 }
 
 
