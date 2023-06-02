@@ -1,0 +1,55 @@
+********************************************************************************************************************************************
+***                                                                                                                                      ***
+***                                                       EVALUATION PROJET BACK-END                                                     ***
+***                                                                                                                                      ***
+********************************************************************************************************************************************
+
+   Créer un forum de discussion (exemple stackoverflow) ayant pour but de générer de nouveaux topics (Sujet de la discussion) et une fois ces 
+   topics créés d'envoyer des messages en lien avec ce topic. Chaque topic sera en liens avec l'utilisateur l'ayant créé, en suite chaque message 
+   contenu dans le topic sera en liens avec le topic lui-même et avec l'utilisateur postant ce message. Toutes les pages sont accessibles déconnectés, 
+   seuls les formulaires de création de topic et d'envoi de message ne seront pas accessibles, un message devra être transmis à l'utilisateur pour 
+   lui communiqué le fait de se connecter si il souhaite créé un nouveau topic ou participer à la discussion. 
+
+    1) créer la BDD nommée evaluation avec les 3 tables telles que représentées sur le diagramme, les contraintes ne sont pas obligatoires mais peuvent 
+      être utiles lors de la suppression des topics par l'utilisateur l'ayant posté qui devra généré de même la suppression de tout les messages en liens 
+     avec ce topic.
+
+    2) mettre en place l'inscription la connexion et la déconnexion. Tout les champs de BDD sont des champs de formulaire hormis les champs de clés primaire ou de 
+      clés étrangère (id, id_...). Tout les champs sont obligatoire à la saisie et des contrôles devront être effectués pour s'en assuré. De même un utilisateur 
+      sera connecté grâce à son email et son mot de passe. Son email devra donc être unique en BDD, effectués ce contrôle de même. Mettre en place l'affichage
+      des messages d'erreurs pour l'utilisateur (soit par la session=> ne pas oublier une redirection sur la même page pour qu'ils s'affiches, 
+      soit via des variables individuelles aux champs de formulaire). Le format du fichier photo devra de même être controllé (jpg, jpeg, gif, png, webp)
+      et il devra êtrer renommé avant l'upload. Gérer ensuite l'aparition ou non des boutons de connexion , deconnexion et inscription en fonction qu'ils
+      soient connectés en session ou non.
+
+     3) La page d'accueil index.php contiendra un formulaire de création de topic (à la condition qu'il soit connecté) et affichera la liste de tout les 
+       topics par date de création de la plus récente à la plus ancienne. Toutes les informations du topic devront être affichées (pseudo du créateur, photo
+       du créateur, date au format français ainsi que le titre). 
+       
+       
+       
+       
+       Créer un lien permettant d'accéder aux messages de ce topic contenus dans la page tchat.php
+      ( ne pas oublier de faire transiter l'id de ce topic en get).
+      
+       Si l'utilisateur est connecté et que les topics sont les siens lui faire apparaitre un bouton de suppression qui génèrera la supression du topic et
+       de tout les messages en lien avec ce topic.
+
+     4) La page tchat.php contient tout les messages en liens avec un topic. Le titre du topic devra être affiché. Un formulaire de message sera 
+        disponible si l'utilisateur est connecté et chaque message devra être affiché avec toutes ses informations (pseudo du créateur, photo
+       du créateur, date au format français ainsi que le contenu). Si le message posté est celui de l'utilisateur connecté modifier son backgroud afin
+       qu'il sache que ce sont ses messages.
+
+      
+      ***** Penser à bien nommé les fichiers, les colonnes en BDD etc ... **** Utiliser des noms de variables cohérents **** indenter son code correctement
+      ****   effectués tout les contrôles sur formulaire, contrôles sur apparition des liens ou non et vérifier toujours la présence des paramètres dans l'url.
+
+       Faire un export de la BDD, la placer à la racine du dossier evaluation. Zipper le tout dans un dossier à nommé nom_prenom et me la transmettre 
+       sur zoom ou bien sur discord
+
+    Barême: 1=>3pts , 2=>5pts , 3=>5pts ,  4=>5pts ,***=>2pts ,(bonus= html/css, mise en forme => 2pts) 
+     
+
+
+    
+ 
