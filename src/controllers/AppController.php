@@ -206,11 +206,13 @@ class AppController
             Message::add([
                 'content'     => $_POST['content'],
                 'id_user'   => $_SESSION['user']['id_user'],
-                'id_topic'  => $_SESSION['user']['id_topic'],
+                'id_topic'  => $_GET['id'],
                 'created_at'=> date_format(new DateTime(), 'Y-m-d H:i:s'),
             ]);
 
             $_SESSION['messages']['success'][] = "Vous pouvez désormais ajouter un commentaire";
+            header('location;' . BASE . 'topic/tchat?id=' . $_GET['id']);
+            exit;
                
         }
     

@@ -28,7 +28,7 @@
                     </small>
                 </div>
                 <button type="submit" class="btn btn-outline-secondary my-4">Ajouter</button>
-            </form
+        </form>
         </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
                 <h2><?= $topic['title']; ?></h2>
                 <p>par : <?= $topic['nickname']; ?></p>
                 <p class="mb-3"><?= $topic['created_at']; ?></p>
-                
+
                 <a href="<?= BASE . 'topic/tchat?id=' . $topic['id_topic']; ?>" class="btn btn-info">Voir la discussion</a>
             </div>
             <?php if(isset($_SESSION['user']) && $topic['id_user'] == $_SESSION['user']['id_user']): ?>

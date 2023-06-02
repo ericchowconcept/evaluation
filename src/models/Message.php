@@ -6,7 +6,7 @@ class Message extends Db
     {
         $pdo = self::getDb();
         $response = $pdo->prepare("INSERT INTO message(content, id_user, id_topic, created_at) 
-        VALUES (:title, :id_user, :created_at)");
+        VALUES (:content, :id_user, :id_topic, :created_at)");
         $response->execute(self::htmlspecialchars($data));
         return $pdo->lastInsertId();
     } 
